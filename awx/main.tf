@@ -14,7 +14,7 @@ resource "awx_job_template_credential" "ping" {
 }
 
 resource "awx_job_template" "hello_shell" {
-  name      = "${var.name_prefix}hello"
+  name      = "${var.name_prefix}hello_shell"
   project   = var.project_id
   inventory = var.inventory_id
   playbook  = "playbooks/run_a_shell_command.yml"
