@@ -10,15 +10,3 @@ module "ping" {
   name     = "ping"
   playbook = "playbooks/ping.yml"
 }
-
-# One-time migration from the previous layout (templates defined directly in
-# this module); safe to delete once it has been applied everywhere.
-moved {
-  from = awx_job_template.ping
-  to   = module.ping.awx_job_template.this
-}
-
-moved {
-  from = awx_job_template_credential.ping
-  to   = module.ping.awx_job_template_credential.this
-}
