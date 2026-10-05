@@ -21,3 +21,11 @@ module "awx_job_template" {
   playbook = "playbooks/run_a_shell_command.yml"
 }
 
+module "awx_job_template" {
+  source  = var.modules.job_template
+  context = var.context
+
+  name     = "hello_shell_check"
+  playbook = "playbooks/run_a_shell_command.yml"
+  job_type = "check"
+}
