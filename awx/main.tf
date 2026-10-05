@@ -3,7 +3,8 @@
 
 
 
-module "awx_job_template" {
+
+module "ping" {
   source  = var.modules.job_template
   context = var.context
 
@@ -13,7 +14,7 @@ module "awx_job_template" {
 
 
 
-module "awx_job_template" {
+module "hello_shell" {
   source  = var.modules.job_template
   context = var.context
 
@@ -21,7 +22,7 @@ module "awx_job_template" {
   playbook = "playbooks/run_a_shell_command.yml"
 }
 
-module "awx_job_template" {
+module "hello_shell_check" {
   source  = var.modules.job_template
   context = var.context
 
