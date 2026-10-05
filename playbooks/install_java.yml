@@ -1,0 +1,10 @@
+---
+- name: Install Java
+  hosts: all
+  become: true
+  tasks:
+    - name: Install the OpenJDK 21 runtime
+      ansible.builtin.apt:
+        name: openjdk-21-jre-headless
+        state: present
+        update_cache: true

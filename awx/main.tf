@@ -10,3 +10,12 @@ module "ping" {
   name     = "ping"
   playbook = "playbooks/ping.yml"
 }
+
+module "install_java" {
+  source  = var.modules.job_template
+  context = var.context
+
+  name     = "install_java"
+  playbook = "playbooks/install_java.yml"
+  become   = true
+}
